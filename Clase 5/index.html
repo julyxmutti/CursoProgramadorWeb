@@ -1,0 +1,40 @@
+<!-- Bootstrap 4
+Framework de CSS con estilos definidos-->
+<html>
+    <head>
+        <!-- Se puede tener bootstrap local u online
+        Esta en cache (mejora el tiempo de carga del sitio) 
+    .min el archivo es minificado (ocupa menos tiempo en el servidor)-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Genera un contenedero con margen a los costados. Tambien la tipografia de lo que esta en el contenedor -->
+            <h1>1 , 2 , 3 , Probando Bootstrap</h1>
+            <!-- Generamos el sistema de grillas -->
+            <div class="row">
+                <!-- Creamos una fila -->
+                <div class="col-xl-6">
+                    <h2>Primer columna en mi fila</h2>
+                <div class="col-xl-6"></div>
+                    <h2>Segunda columna de mi fila</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4"> Columnas de bootstrap </div>
+                <div class="col-lg-4"> Columnas de bootstrap </div>
+                <div class="col-lg-4"> Columnas de bootstrap </div> 
+            </div>
+            <div class="col-xl-10 col-lg-8 col-sm-6" 
+            style="background:tomato;
+            height: 400px;">
+                <h2>Subtitulo 1</h2>
+            </div>
+            <div class="col-xl-10 col-lg-8 col-sm-6"
+            style="background:yellowgreen;
+            height: 400px;">
+                <h2>Subtitulo 2 </h2>
+            </div>
+        </div>
+    </body>
+</html>

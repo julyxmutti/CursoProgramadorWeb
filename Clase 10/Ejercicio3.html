@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="cifra1">
+    <input type="text" id="cifra2">
+    <input type="text" id="cifra3">
+
+    <button type="button" id="suma">+</button>
+    <button type="button" id="resta">-</button>
+    <button type="button" id="division">/</button>
+    <button type="button" id="multiplicacion">*</button>
+<span id="calcular"></span>
+<script>
+    addEventListener("load", calcular);
+    function calcular() {
+        // poner a escuchar a TODOS LOS EVENTOS
+        document.getElementById('suma').addEventListener('click',sumar);
+        document.getElementById("resta").addEventListener("click",restar);
+        document.getElementById("division").addEventListener("click", dividir);
+        document.getElementById("multiplicacion").addEventListener("click", multiplicar);
+    }
+
+    function sumar() {
+        var num1 = parseInt(document.getElementById('cifra1').value);
+        var num2 = parseInt(document.getElementById("cifra2").value);
+        var num3 = parseInt(document.getElementById("cifra3").value);
+        resultado = num1+num2+num3;
+        document.getElementById('calcular').value = resultado;
+    }
+
+    function restar(){
+        var num1 = parseInt(document.getElementById("cifra1").value);
+        var num2 = parseInt(document.getElementById("cifra2").value);
+        var num3 = parseInt(document.getElementById("cifra3").value);
+        resultado = num1-num2-num3;
+        document.getElementById("calcular").value = resultado;
+
+    function dividir(){
+        var num1 = parseInt(document.getElementById("cifra1").value);
+        var num2 = parseInt(document.getElementById("cifra2").value);
+        var num3 = parseInt(document.getElementById("cifra3").value);
+        resultado = num1/num2/num3;
+        document.getElementById("calcular").value = resultado;
+
+    function multiplicar(){
+        var num1 = parseInt(document.getElementById("cifra1").value);
+        var num2 = parseInt(document.getElementById("cifra2").value);
+        var num3 = parseInt(document.getElementById("cifra3").value);
+        resultado = num1*num2*num3;
+        document.getElementById("calcular").value = resultado;
+    }
+
+</script>
+</body>
+</html>

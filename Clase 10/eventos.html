@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    
+        <!-- // Los id identifican de forma unica a los elementos -->
+        <input type="text" id="texto1">
+        <span id="restantes"> 250 </span>
+        <select id="comidas">
+
+            <option value="papitas con cheddar">Papas</option>
+            <option value="birrita">La mejor birra de todas</option>
+            <option value="cangreburger">Hamburguesota</option>
+
+        </select>
+     
+        <input type="text" id="comida_elegida" placeholder="Tu comida favorita es...">
+     <script>
+        //  Evento: keydown - keyup
+        //  almacenamos la cantidad de caracteres que tiene el input y se la restamos a 250
+
+        // Funcion propia de js que tiene 2 parametros obligatorios: El elemento a escuchar y la funcion que se ejecuta cuando sucede el evento
+        addEventListener("load", comenzar);
+        // EVENTOS JS: Click, blur, focus, dobleclick, load, keydown, mousemove
+        // FUNCIONES: Las damos nosotros, ej contar caracteres
+        function comenzar() {
+            // getElementById -> Crea una referencia del elemento al que accedemos
+            document.getElementById("texto1").addEventListener("keyup", contarCaracteres);
+            // Change -> Disparar la funcion papitas cuando hay una nueva seleccion en el select, es decir, cuando el valor del select cambia
+            document.getElementById("comidas").addEventListener("change", papitas);
+            }
+
+        function papitas(){
+            alert(document.getElementById("comidas").value);
+            // Voy a poner dentro del input con Id: comida_elegida : el valor que fue seleccionado del select con id comidas
+            document.getElementById("comida_elegida").value = document.getElementById("comida").value;
+        }
+
+        function contarCaracteres(){
+        var caracteres = parseInt(document.getElementById("texto1").value.length);
+             // Una vez obtenida la referencia del elemento, accedo a  su valor con la propiedad value y a la cant de caracteres con la propiedad length
+        var disponibles = 250 - caracteres; 
+        // innerHTML: Es una propiedad que se despredende de la referencia a un elemnto html y modifica u obtiene el valor que hay dentro
+        document.getElementById("restantes").innerHTML = disponibles;
+        // input maxlength="250"
+        }
+     </script>
+
+
+</body>
+</html>

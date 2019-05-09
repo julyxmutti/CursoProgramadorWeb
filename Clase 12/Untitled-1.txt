@@ -1,0 +1,73 @@
+1. Tabla de usuarios (Usuarios):
+    Campos: id, usuario, pwd
+    primary key(id), A_I
+    usuario, pwd varchar(100)
+
+2. Tabla de personas (Personas):
+    Campos: id A_I, primary
+
+Integridad referencial
+¿Como logramos que las tablas mantengan la consistencia de la informacion almacenada?
+    Relacionando los datos (CLave foranea)
+
+Para unir 2 o mas tablas tenemos la opcion JOIN.
+
+left JOIN
+right JOIN (trae lo de la tabla derecha)
+inner JOIN (trae absolutamente todo de las 2 tablas)
+full JOIN
+
+QUIERO TRAER TODO DE AMBAS tablas
+
+inner join, join
+
+SELECT * FROM usuarios JOIN personas;
+
+Encriptar informacion
+MD5
+SHA1
+
+WHERE id_usuario
+Siempre que se quiera aplicar un filtro a una consulta con JOINS debo especificar a que tabla pertenece ese campo.
+
+SELECT * from usuarios join personas where usuarios.id_usuario = 1;
+
+--alias: Es un sobrenombre que le aplicamos a las tablas para llamarlas facilmente en nuestra consulta
+
+SELECT * from usuarios as u join personas as p where u.id_usuario=1;
+
+SELECT telefono from usuarios as u join personas as p on u.id_usuario = p.id_persona_usuario where u.id_usuario = 1 and p.sexo = "M";
+
+--Agregamos el campor por el cual se relacionan las tablas medidante el ON
+
+--LIKE (PATRONES)
+--LIKE es un operador SQL que es utilizado como comodin para completar busquedas aplicado como condicion al where.
+--ALGO% la palabra debe comenzar en "algo"
+--%ALGO% se  busca cualquier registo que tenga "algo"
+
+
+LIMIT
+--Poder limitar la cantidad de resultados de una consulta
+LIMIT 10 (0 a 10)
+1 - 10
+El numero de pagina (1) cuando arrancamos es nuestra variable
+LIMIT variable * 10; --limit 10
+variable = 2;
+LIMIT 10,2*10 -- limit va a ir del 10 al 19
+
+SELECT * from historial_google where busqueda_usuario LIKE " FIRE% "
+
+select count(*) from usuarios where usuario="franco" and password="1234"
+Si el usuario y la contraseña coinciden "" "" "" 0
+
+
+---------------------------------------------------------------------------------
+
+*diagramar la tabla reservas (recordar que tiene relacion con la tabla usuarios y con la tabla promociones (claves foraneas))
+
+Diagramar la tabla de promociones
+
+En el login: que consultas debo hacer? QUe resultado espero?
+En el registro: Que consultas tengo que hacer para verificar que el usuario exista, que resultados espero
+Reservas: Debo mostrar todas las reservas y la informacion del usuario (que tablas voy a juntar) aplicar logica de paginacion. ¿que es el limit? como los aplico a las paginas?
+Promociones: El admin debe poder cargar promociones del dia.

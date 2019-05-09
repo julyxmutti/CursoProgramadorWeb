@@ -1,0 +1,12 @@
+1)  select nombre, ocupacion from empleados;
+2)select nombre, edad from empleados;
+3) select nombre, edad from empleados where trabajo="Programador";
+4) select edad from empleados where edad >30;
+5) select apellido,mail from empleados where nombre="Juan";
+6) select nombre from empleados where trabajo="programador" or "desarrollador web";
+7) select id_emp, nombre, apellido, trabajo from empleados where id_emp between 15 and 20;
+8) select nombre, apellido from empleados where salario < 800;
+9) select nombre, apellido from empleados where salario between 750 and 900;
+12) insert into empleados (id_emp, Nombre, Apellido, Trabajo, Edad, Salario, Mail) values ("Francisco Perez", "Programador", 26, 900, "francisco@bignet.com")
+
+13) delete  

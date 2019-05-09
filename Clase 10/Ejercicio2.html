@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <span id="relojito">0</span>
+    <script>
+    // Cuando se carga la pagina se dispara la funcion CARGAR
+    addEventListener("load", cargar);
+    var relojito = 0;
+    function cargar(){
+        // Funcion propia de JS que cada cierto periodo de tiempo, dispara una funcion
+        // 1er parametro: la funcion a disparar
+        // 2do parametro: cada cuanto tiempo
+        setInterval(contador,1000);
+        // El tiempo por defecto está en milisegundos
+    }
+
+    function contador(){
+        var numerito = parseInt(document.getElementById("relojito").innerHTML);
+        numerito++;
+        document.getElementById("relojito").innerHTML = numerito;
+    }
+    </script>
+</body>
+</html>

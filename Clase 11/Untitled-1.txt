@@ -1,0 +1,27 @@
+SQL (Lenguaje de consultas estructurada)
+Base de datos relacional:
+    Un lugar donde se almacena información estructurada de cualquier tipo
+
+La fila de nuestra tabla representa un registro. Cada columna se denomina campo.
+Cada hoja (pestaña) se llama Tabla
+
+
+MySQL(es gratis): Motor de base de datos SQL
+MySQL SERVER (es pago)
+
+xampp: Inclusivo apache mysql php perl
+
+select campo from tabla where edad between 20 and 26;
+
+select * from datos_personas where nombre in("Franco", "Calixto");
+
+select count (*) from datos_personas;
+
+select count(nombre) from datos_personas where nombre="Calixto" and edad > 20;
+
+select max(edad) from datos_personas;
+select min(edad) from datos_personas;
+
+select avg(edad) from datos_personas; SACA EL PROMEDIO
+
+Select sum(edad) from datos_personas; SUMA TODAS LAS EDADES DE LA TABLA
