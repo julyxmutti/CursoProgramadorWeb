@@ -1,0 +1,12 @@
+express nombre_proyecto --hbs
+cd nombre_proyecto
+npm install (instalar los modulos)
+
+npm install nodemailer --save
+npm install mysql
+npm install uuid
+npm install md5
+mandar mails
+
+npm install multer --save
+multer: contenido multimedia (fotos, videos, etc)

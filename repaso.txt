@@ -1,0 +1,5 @@
+Bin: Parametros de configuracion (server)
+Nodemodules: Los modelus / clases de node, son librerias
+Public: Hojas de estilo y js del lado del cliente
+App.use('/', IndexRouter): CUando nos encontramos en la ruta tal "/", mostramos lo que está despues de la coma
+
